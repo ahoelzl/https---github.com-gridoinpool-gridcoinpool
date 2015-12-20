@@ -34,8 +34,7 @@ webElem <- remDr$findElement(using = 'id', value = "password")
 
 webElem$clearElement()
 
-webElem$sendKeysToElement(list( <- "bampwd" 
-))
+webElem$sendKeysToElement(list(bampwd))
 
 webElem <- remDr$findElement(using = 'name', value="login")
 
