@@ -192,11 +192,6 @@ getUserWorktable <- function(g) {
 } 
 
 
-
-
-#####until here on windows
-#####then copy .RData into server, restart R there and then continue running the program
-
 mydb = dbConnect(MySQL(), user=user, password=password, dbname=dbname, host=host, overwrite=T)
 dbListTables(mydb)
 
@@ -293,7 +288,7 @@ system("gridcoinresearchd walletlock" )
 
 
 print("test0")
-mydb = dbConnect(MySQL(), user='root', password='minka123', dbname='gridcoin', host='localhost', overwrite=T)
+mydb = dbConnect(MySQL(), user=user, password=password, dbname=dbname, host=host, overwrite=T)
 rs = dbSendQuery(mydb, "select * from hosts")
 data = fetch(rs, n=-1)
 
